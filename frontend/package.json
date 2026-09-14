@@ -1,0 +1,8 @@
+{
+  "name": "cv-platform-frontend",
+  "private": true,
+  "version": "0.2.0",
+  "scripts": {"dev": "next dev", "build": "next build", "start": "next start", "lint": "tsc --noEmit", "typecheck": "tsc --noEmit"},
+  "dependencies": {"@supabase/ssr": "^0.8.0", "@supabase/supabase-js": "^2.91.1", "lucide-react": "^0.563.0", "next": "16.1.4", "react": "19.2.0", "react-dom": "19.2.0"},
+  "devDependencies": {"@types/node": "25.0.10", "@types/react": "^19.2.9", "autoprefixer": "^10.4.23", "postcss": "^8.5.6", "tailwindcss": "^3.4.19", "typescript": "5.9.3"}
+}

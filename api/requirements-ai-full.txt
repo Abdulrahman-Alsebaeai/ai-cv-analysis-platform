@@ -1,0 +1,5 @@
+-r requirements.txt
+sentence-transformers>=3.0,<4
+transformers>=4.44,<5
+torch>=2.3,<3
+huggingface-hub>=0.24,<1

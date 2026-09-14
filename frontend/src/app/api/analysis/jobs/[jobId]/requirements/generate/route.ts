@@ -1,0 +1,4 @@
+import { NextResponse } from "next/server";
+import { requireRecruiterJobAccess } from "@/lib/serverPermissions";
+export const runtime = "nodejs";
+export async function POST(_: Request, ctx: { params: Promise<{ jobId: string }> }) { const jobId = (await ctx.params).jobId; const permission = await requireRecruiterJobAccess(jobId, true); if ("error" in permission) return permission.error; const apiUrl = process.env.ANALYSIS_API_URL; if (!apiUrl) return NextResponse.json({ error: "ANALYSIS_API_URL is missing" }, { status: 500 }); const res = await fetch(`${apiUrl}/analysis/jobs/${jobId}/requirements/generate`, { method: "POST", headers: { "x-api-key": process.env.ANALYSIS_API_KEY || "" }, cache: "no-store" }); const text = await res.text(); return new NextResponse(text, { status: res.status }); }

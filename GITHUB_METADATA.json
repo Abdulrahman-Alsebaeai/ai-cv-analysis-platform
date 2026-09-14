@@ -1,0 +1,17 @@
+{
+  "description": "Full-stack AI-assisted recruitment platform with Next.js, FastAPI, Supabase, CV parsing, candidate scoring/ranking, bilingual UI, RLS, and report exports.",
+  "topics": [
+    "nextjs",
+    "react",
+    "typescript",
+    "fastapi",
+    "python",
+    "supabase",
+    "postgresql",
+    "artificial-intelligence",
+    "nlp",
+    "recruitment",
+    "resume-parser",
+    "candidate-ranking"
+  ]
+}

@@ -1,0 +1,5 @@
+export const appRoutes = {
+  public: { home: "/", jobs: "/jobs", jobDetails: (jobId: string) => `/jobs/${jobId}`, login: "/auth/login", register: "/auth/register" },
+  applicant: { dashboard: "/applicant/dashboard", profile: "/applicant/profile", notifications: "/applicant/notifications", applications: "/applicant/applications", applicationDetails: (id: string) => `/applicant/applications/${id}` },
+  recruiter: { dashboard: "/dashboard", onboarding: "/dashboard/onboarding", company: "/dashboard/company", jobs: "/dashboard/jobs", newJob: "/dashboard/jobs/new", jobDetails: (id: string) => `/dashboard/jobs/${id}`, jobEdit: (id: string) => `/dashboard/jobs/${id}/edit`, jobRequirements: (id: string) => `/dashboard/jobs/${id}/requirements`, jobCandidates: (id: string) => `/dashboard/jobs/${id}/candidates`, jobCandidateRanking: (id: string) => `/dashboard/jobs/${id}/candidates/ranking`, jobPipeline: (id: string) => `/dashboard/jobs/${id}/pipeline`, jobSnapshots: (id: string) => `/dashboard/jobs/${id}/snapshots`, candidateResumeDetails: (id: string) => `/dashboard/candidate-resumes/${id}`, snapshotDetails: (id: string) => `/dashboard/snapshots/${id}` }
+} as const;
